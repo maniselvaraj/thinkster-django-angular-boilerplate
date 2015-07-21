@@ -26,7 +26,7 @@
         };
         return Authentication; //the return the module
 
-        function register(email, password, username){
+        function register(email, username, password ){
             return $http.post('/api/v1/accounts/',{
                 username: username,
                 password: password,
