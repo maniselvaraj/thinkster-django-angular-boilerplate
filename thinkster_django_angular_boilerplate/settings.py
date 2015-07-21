@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'compressor',
+    'authentication'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,3 +114,10 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
+
+
+#Even though we have created this Account model,
+# the command python manage.py createsuperuser
+# (which we will talk more about shortly) still creates User objects.
+# This is because, at this point, Django still believes that User is the model we want to use for authentication.
+AUTH_USER_MODEL = 'authentication.Account'
