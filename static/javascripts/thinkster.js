@@ -6,7 +6,9 @@
             'thinkster.config',
             'thinkster.routes',
             'thinkster.authentication',
-            'thinkster.layout'
+            'thinkster.layout',
+            'thinkster.activities',
+            'thinkster.utils'
         ]);
     angular
         .module('thinkster.routes', ['ngRoute']);

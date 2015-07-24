@@ -1,0 +1,15 @@
+.no-activities-here {
+  text-align: center;
+}
+
+.activity {}
+
+.activity .activity__meta {
+  font-weight: bold;
+  text-align: right;
+  padding-bottom: 19px;
+}
+
+.activity .activity__meta a:hover {
+  text-decoration: none;
+}
