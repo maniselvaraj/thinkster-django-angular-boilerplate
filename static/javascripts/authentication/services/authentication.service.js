@@ -32,6 +32,6 @@
                 password: password,
                 email: email
             });
-        }
-    }
+        };
+    };
 })();  //What is this syntax?
