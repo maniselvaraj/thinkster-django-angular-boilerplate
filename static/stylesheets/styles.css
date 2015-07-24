@@ -13,3 +13,10 @@
 .activity .activity__meta a:hover {
   text-decoration: none;
 }
+
+
+.btn-add-new-activity {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
