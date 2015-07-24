@@ -23,6 +23,7 @@
     function Authentication($cookies, $http){
         var Authentication = {
             login: login,
+            logout: logout,
             register: register,
             isAuthenticated: isAuthenticated,
             setAuthenticatedAccount: setAuthenticatedAccount,
@@ -31,6 +32,20 @@
         };
         return Authentication; //the return the module
 
+
+        function logoutSuccessFn(data, status, headers, config){
+            Authentication.unauthenticate();
+            window.location='/';
+        }
+        function logoutErrorFn(data, status, headers, config){
+            console.error('failed to logout');
+            alert('failed to logout');
+        }
+
+        function logout(){
+            return $http.post('/api/v1/auth/logout/')
+                .then(logoutSuccessFn, logoutErrorFn);
+        }
 
 
         function loginSuccessFn(data, status, headers, config){
